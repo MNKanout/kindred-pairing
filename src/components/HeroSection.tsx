@@ -1,0 +1,92 @@
+import { Button } from "@/components/ui/button";
+import heroIllustration from "@/assets/hero-illustration.jpg";
+
+const HeroSection = () => {
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
+      {/* Parallax Background Elements */}
+      <div className="absolute inset-0 opacity-20">
+        <div 
+          className="absolute top-20 left-10 w-32 h-32 bg-primary rounded-full blur-xl animate-pulse"
+          style={{ animationDelay: '0s', animationDuration: '4s' }}
+        />
+        <div 
+          className="absolute bottom-32 right-20 w-24 h-24 bg-accent rounded-full blur-lg animate-pulse"
+          style={{ animationDelay: '2s', animationDuration: '3s' }}
+        />
+        <div 
+          className="absolute top-1/2 left-1/4 w-16 h-16 bg-primary rounded-full blur-md animate-pulse"
+          style={{ animationDelay: '1s', animationDuration: '5s' }}
+        />
+      </div>
+
+      <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
+        {/* Content */}
+        <div className="text-center lg:text-left space-y-8 animate-fade-in">
+          <div className="space-y-4">
+            <h1 className="text-5xl lg:text-7xl font-bold text-foreground leading-tight">
+              Velkommen til{" "}
+              <span className="bg-gradient-primary bg-clip-text text-transparent">
+                Afaf
+              </span>
+            </h1>
+            <p className="text-xl lg:text-2xl text-muted-foreground max-w-2xl">
+              Et trygt hjem for utdanning, veiledning og støtte for muslimske familier i Norge
+            </p>
+            <p className="text-lg text-muted-foreground max-w-2xl">
+              Vi tilbyr omfattende tjenester innen utdanning, coaching og rådgivning for å hjelpe nye familier med å integrere seg i det norske samfunnet.
+            </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <Button size="lg" className="shadow-soft hover:shadow-lg transition-all duration-300">
+              Kom i gang
+            </Button>
+            <Button variant="outline" size="lg" className="hover:bg-accent transition-all duration-300">
+              Les mer om oss
+            </Button>
+          </div>
+
+          {/* Stats */}
+          <div className="grid grid-cols-3 gap-8 pt-8 border-t border-border">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-primary">500+</div>
+              <div className="text-sm text-muted-foreground">Familier hjulpet</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-primary">10+</div>
+              <div className="text-sm text-muted-foreground">År erfaring</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-primary">95%</div>
+              <div className="text-sm text-muted-foreground">Fornøyde kunder</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Illustration */}
+        <div className="relative">
+          <div className="relative z-10 transform hover:scale-105 transition-transform duration-500">
+            <img 
+              src={heroIllustration} 
+              alt="Diverse families learning together"
+              className="w-full h-auto rounded-3xl shadow-card"
+            />
+          </div>
+          {/* Floating elements */}
+          <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-primary rounded-full opacity-60 animate-pulse" />
+          <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-accent rounded-full opacity-40 animate-pulse" style={{ animationDelay: '1s' }} />
+        </div>
+      </div>
+
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="w-6 h-10 border-2 border-primary rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-pulse" />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default HeroSection;

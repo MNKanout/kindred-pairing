@@ -1,8 +1,17 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { Globe } from "lucide-react";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [currentLanguage, setCurrentLanguage] = useState("NO");
+
+  const languages = [
+    { code: "NO", name: "Norsk", flag: "🇳🇴" },
+    { code: "EN", name: "English", flag: "🇬🇧" },
+    { code: "AR", name: "العربية", flag: "🇸🇦" },
+  ];
 
   const menuItems = [
     { name: "Hjem", href: "#home" },
@@ -34,9 +43,27 @@ const Navigation = () => {
                 {item.name}
               </a>
             ))}
-            <Button className="shadow-soft hover:shadow-lg transition-all duration-300">
-              Gratis konsultasjon
-            </Button>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="outline" size="sm" className="flex items-center gap-2">
+                  <Globe size={16} />
+                  {languages.find(lang => lang.code === currentLanguage)?.flag}
+                  {currentLanguage}
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="bg-background border-border z-50">
+                {languages.map((language) => (
+                  <DropdownMenuItem
+                    key={language.code}
+                    onClick={() => setCurrentLanguage(language.code)}
+                    className="flex items-center gap-2 cursor-pointer hover:bg-accent"
+                  >
+                    <span>{language.flag}</span>
+                    <span>{language.name}</span>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
 
           {/* Mobile Menu Button */}
@@ -83,9 +110,27 @@ const Navigation = () => {
                   {item.name}
                 </a>
               ))}
-              <Button className="w-full mt-4 shadow-soft hover:shadow-lg transition-all duration-300">
-                Gratis konsultasjon
-              </Button>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button variant="outline" className="w-full mt-4 flex items-center justify-center gap-2">
+                    <Globe size={16} />
+                    {languages.find(lang => lang.code === currentLanguage)?.flag}
+                    {currentLanguage}
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="bg-background border-border z-50 w-full">
+                  {languages.map((language) => (
+                    <DropdownMenuItem
+                      key={language.code}
+                      onClick={() => setCurrentLanguage(language.code)}
+                      className="flex items-center gap-2 cursor-pointer hover:bg-accent"
+                    >
+                      <span>{language.flag}</span>
+                      <span>{language.name}</span>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
             </div>
           </div>
         )}

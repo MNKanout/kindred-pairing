@@ -7,18 +7,41 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentLanguage, setCurrentLanguage] = useState("NO");
 
+  const content = {
+    NO: {
+      menuItems: [
+        { name: "Hjem", href: "#home" },
+        { name: "Om oss", href: "#about" },
+        { name: "Tjenester", href: "#services" },
+        { name: "Kontakt", href: "#contact" },
+      ]
+    },
+    EN: {
+      menuItems: [
+        { name: "Home", href: "#home" },
+        { name: "About", href: "#about" },
+        { name: "Services", href: "#services" },
+        { name: "Contact", href: "#contact" },
+      ]
+    },
+    AR: {
+      menuItems: [
+        { name: "الرئيسية", href: "#home" },
+        { name: "من نحن", href: "#about" },
+        { name: "الخدمات", href: "#services" },
+        { name: "اتصل بنا", href: "#contact" },
+      ]
+    }
+  };
+
   const languages = [
     { code: "NO", name: "Norsk", flag: "🇳🇴" },
     { code: "EN", name: "English", flag: "🇬🇧" },
     { code: "AR", name: "العربية", flag: "🇸🇦" },
   ];
 
-  const menuItems = [
-    { name: "Hjem", href: "#home" },
-    { name: "Om oss", href: "#about" },
-    { name: "Tjenester", href: "#services" },
-    { name: "Kontakt", href: "#contact" },
-  ];
+  const currentContent = content[currentLanguage];
+  const menuItems = currentContent.menuItems;
 
   return (
     <nav className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b border-border z-50">
@@ -48,7 +71,6 @@ const Navigation = () => {
                 <Button variant="outline" size="sm" className="flex items-center gap-2">
                   <Globe size={16} />
                   {languages.find(lang => lang.code === currentLanguage)?.flag}
-                  {currentLanguage}
                 </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent className="bg-background border-border z-50">
@@ -115,7 +137,6 @@ const Navigation = () => {
                   <Button variant="outline" className="w-full mt-4 flex items-center justify-center gap-2">
                     <Globe size={16} />
                     {languages.find(lang => lang.code === currentLanguage)?.flag}
-                    {currentLanguage}
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="bg-background border-border z-50 w-full">

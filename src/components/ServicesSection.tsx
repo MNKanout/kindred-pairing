@@ -1,44 +1,30 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import servicesIllustration from "@/assets/services-illustration.jpg";
 
 const ServicesSection = () => {
   const services = [
     {
-      title: "Norsk Språkopplæring",
-      description: "Intensive språkkurs tilpasset forskjellige nivåer, fra nybegynner til avansert.",
+      title: "Education",
+      description: "Learn about the duties, expectations, and how to choose your partner. How to solve conflicts to have the knowledge needed for a happy family life.",
       icon: "📚",
-      features: ["Små grupper", "Erfarne lærere", "Fleksible tidspunkter", "Gratis materiell"]
+      features: ["Partner Selection Guidance", "Conflict Resolution", "Family Duties", "Marriage Expectations"],
+      slug: "education"
     },
     {
-      title: "Jobbsøking og Karriere",
-      description: "Veiledning i jobbsøking, CV-skriving og intervjuforberedelse for det norske arbeidsmarkedet.",
-      icon: "💼",
-      features: ["CV-optimalisering", "Intervjutrening", "Nettverksbygging", "Karriererådgivning"]
+      title: "Platform", 
+      description: "Matchmaking platform that focuses on Islamic and cultural values to provide an experience that aligns with these values.",
+      icon: "💕",
+      features: ["Islamic Values Based", "Cultural Alignment", "Secure Matching", "Privacy Protection"],
+      slug: "platform"
     },
     {
-      title: "Familierådgivning",
-      description: "Støtte for familier i overgangsprosessen og tilpasning til norske samfunnsnormer.",
-      icon: "👨‍👩‍👧‍👦",
-      features: ["Konflikthåndtering", "Kommunikasjon", "Kulturell tilpasning", "Parterapi"]
-    },
-    {
-      title: "Barns Utvikling",
-      description: "Spesialiserte programmer for barn og ungdom for å sikre vellykket skolegang og sosial integrasjon.",
-      icon: "🎈",
-      features: ["Leksehjelp", "Sosiale ferdigheter", "Identitetsutvikling", "Mobbing-forebygging"]
-    },
-    {
-      title: "Juridisk Veiledning",
-      description: "Assistanse med dokumenter, søknader og forståelse av norske lover og regler.",
-      icon: "⚖️",
-      features: ["Oppholdstillatelse", "Familiegjenforening", "Borgerskapsøknad", "Boligrettigheter"]
-    },
-    {
-      title: "Samfunnsintegrasjon",
-      description: "Omfattende programmer for å forstå og delta aktivt i det norske samfunnet.",
-      icon: "🏛️",
-      features: ["Samfunnskunnskap", "Demokratiforståelse", "Lokalsamfunn", "Frivillighetsarbeid"]
+      title: "Consulting",
+      description: "The ability to book an appointment to consult about your specific situation; whether you are going to get married or if you are in doubt if the person is right for you.",
+      icon: "🤝",
+      features: ["Personal Consultations", "Pre-Marriage Counseling", "Relationship Guidance", "Flexible Appointments"],
+      slug: "consulting"
     }
   ];
 
@@ -96,9 +82,11 @@ const ServicesSection = () => {
                     </li>
                   ))}
                 </ul>
-                <Button variant="outline" className="w-full mt-4 hover:bg-primary hover:text-primary-foreground transition-all duration-300">
-                  Les mer
-                </Button>
+                <Link to={`/services/${service.slug}`}>
+                  <Button variant="outline" className="w-full mt-4 hover:bg-primary hover:text-primary-foreground transition-all duration-300">
+                    Learn More
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
           ))}

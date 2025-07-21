@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
 import heroIllustration from "@/assets/hero-illustration.jpg";
 
 const HeroSection = () => {
+  const { t } = useLanguage();
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
       {/* Parallax Background Elements */}
@@ -25,25 +27,25 @@ const HeroSection = () => {
         <div className="text-center lg:text-left space-y-8 animate-fade-in">
           <div className="space-y-4">
             <h1 className="text-5xl lg:text-7xl font-bold text-foreground leading-tight">
-              Velkommen til{" "}
+              {t('hero.title')}{" "}
               <span className="bg-gradient-primary bg-clip-text text-transparent">
                 Afaf
               </span>
             </h1>
             <p className="text-xl lg:text-2xl text-muted-foreground max-w-2xl">
-              Et trygt hjem for utdanning, veiledning og støtte for muslimske familier i Norge
+              {t('hero.subtitle')}
             </p>
             <p className="text-lg text-muted-foreground max-w-2xl">
-              Vi tilbyr omfattende tjenester innen utdanning, coaching og rådgivning for å hjelpe nye familier med å integrere seg i det norske samfunnet.
+              {t('hero.description')}
             </p>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <Button size="lg" className="shadow-soft hover:shadow-lg transition-all duration-300">
-              Kom i gang
+              {t('hero.cta')}
             </Button>
             <Button variant="outline" size="lg" className="hover:bg-accent transition-all duration-300">
-              Les mer om oss
+              {t('hero.secondary')}
             </Button>
           </div>
 

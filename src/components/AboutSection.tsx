@@ -1,7 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { useLanguage } from "@/contexts/LanguageContext";
 import aboutIllustration from "@/assets/about-illustration.jpg";
 
 const AboutSection = () => {
+  const { t } = useLanguage();
   return (
     <section className="py-24 bg-gradient-section">
       <div className="container mx-auto px-6">
@@ -21,13 +23,13 @@ const AboutSection = () => {
           <div className="space-y-8 order-1 lg:order-2">
             <div className="space-y-4">
               <h2 className="text-4xl lg:text-5xl font-bold text-foreground">
-                Om{" "}
+                {t('about.title')}{" "}
                 <span className="bg-gradient-primary bg-clip-text text-transparent">
-                  Afaf Instituttet
+                  Afaf
                 </span>
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Afaf Instituttet er et ledende senter for utdanning og integrasjon som spesialiserer seg på å støtte muslimske familier i deres reise mot en vellykket tilpasning til det norske samfunnet.
+                {t('about.description')}
               </p>
             </div>
 

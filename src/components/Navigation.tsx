@@ -2,37 +2,11 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Globe } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [currentLanguage, setCurrentLanguage] = useState("NO");
-
-  const content = {
-    NO: {
-      menuItems: [
-        { name: "Hjem", href: "#home" },
-        { name: "Om oss", href: "#about" },
-        { name: "Tjenester", href: "#services" },
-        { name: "Kontakt", href: "#contact" },
-      ]
-    },
-    EN: {
-      menuItems: [
-        { name: "Home", href: "#home" },
-        { name: "About", href: "#about" },
-        { name: "Services", href: "#services" },
-        { name: "Contact", href: "#contact" },
-      ]
-    },
-    AR: {
-      menuItems: [
-        { name: "الرئيسية", href: "#home" },
-        { name: "من نحن", href: "#about" },
-        { name: "الخدمات", href: "#services" },
-        { name: "اتصل بنا", href: "#contact" },
-      ]
-    }
-  };
+  const { currentLanguage, setLanguage, t } = useLanguage();
 
   const languages = [
     { code: "NO", name: "Norsk", flag: "🇳🇴" },
@@ -40,8 +14,12 @@ const Navigation = () => {
     { code: "AR", name: "العربية", flag: "🇸🇦" },
   ];
 
-  const currentContent = content[currentLanguage];
-  const menuItems = currentContent.menuItems;
+  const menuItems = [
+    { name: t('nav.home'), href: "#home" },
+    { name: t('nav.about'), href: "#about" },
+    { name: t('nav.services'), href: "#services" },
+    { name: t('nav.contact'), href: "#contact" },
+  ];
 
   return (
     <nav className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b border-border z-50">
@@ -77,7 +55,7 @@ const Navigation = () => {
                 {languages.map((language) => (
                   <DropdownMenuItem
                     key={language.code}
-                    onClick={() => setCurrentLanguage(language.code)}
+                    onClick={() => setLanguage(language.code as any)}
                     className="flex items-center gap-2 cursor-pointer hover:bg-accent"
                   >
                     <span>{language.flag}</span>
@@ -143,7 +121,7 @@ const Navigation = () => {
                   {languages.map((language) => (
                     <DropdownMenuItem
                       key={language.code}
-                      onClick={() => setCurrentLanguage(language.code)}
+                      onClick={() => setLanguage(language.code as any)}
                       className="flex items-center gap-2 cursor-pointer hover:bg-accent"
                     >
                       <span>{language.flag}</span>

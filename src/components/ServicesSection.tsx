@@ -1,27 +1,30 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { useLanguage } from "@/contexts/LanguageContext";
 import servicesIllustration from "@/assets/services-illustration.jpg";
 
 const ServicesSection = () => {
+  const { t } = useLanguage();
+  
   const services = [
     {
-      title: "Education",
-      description: "Learn about the duties, expectations, and how to choose your partner. How to solve conflicts to have the knowledge needed for a happy family life.",
+      title: t('services.education.title'),
+      description: t('services.education.description'),
       icon: "📚",
       features: ["Partner Selection Guidance", "Conflict Resolution", "Family Duties", "Marriage Expectations"],
       slug: "education"
     },
     {
-      title: "Platform", 
-      description: "Matchmaking platform that focuses on Islamic and cultural values to provide an experience that aligns with these values.",
+      title: t('services.platform.title'), 
+      description: t('services.platform.description'),
       icon: "💕",
       features: ["Islamic Values Based", "Cultural Alignment", "Secure Matching", "Privacy Protection"],
       slug: "platform"
     },
     {
-      title: "Consulting",
-      description: "The ability to book an appointment to consult about your specific situation; whether you are going to get married or if you are in doubt if the person is right for you.",
+      title: t('services.consulting.title'),
+      description: t('services.consulting.description'),
       icon: "🤝",
       features: ["Personal Consultations", "Pre-Marriage Counseling", "Relationship Guidance", "Flexible Appointments"],
       slug: "consulting"
@@ -34,13 +37,13 @@ const ServicesSection = () => {
         {/* Header */}
         <div className="text-center space-y-4 mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground">
-            Våre{" "}
+            {t('services.title')}{" "}
             <span className="bg-gradient-primary bg-clip-text text-transparent">
-              Tjenester
+              
             </span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Vi tilbyr skreddersydde løsninger for å hjelpe deg og din familie med en smidig overgang til livet i Norge
+            {t('services.subtitle')}
           </p>
         </div>
 
@@ -84,7 +87,7 @@ const ServicesSection = () => {
                 </ul>
                 <Link to={`/services/${service.slug}`}>
                   <Button variant="outline" className="w-full mt-4 hover:bg-primary hover:text-primary-foreground transition-all duration-300">
-                    Learn More
+                    {t('services.cta')}
                   </Button>
                 </Link>
               </CardContent>
@@ -95,7 +98,7 @@ const ServicesSection = () => {
         {/* CTA */}
         <div className="text-center mt-16">
           <Button size="lg" className="shadow-soft hover:shadow-lg transition-all duration-300">
-            Kontakt oss for en gratis konsultasjon
+            {t('services.contact')}
           </Button>
         </div>
       </div>

@@ -1,12 +1,15 @@
+import { useLanguage } from "@/contexts/LanguageContext";
+
 const Footer = () => {
+  const { t } = useLanguage();
   const footerLinks = [
     {
-      title: "Tjenester",
+      title: t('footer.services'),
       links: [
-        "Norsk Språkopplæring",
-        "Jobbsøking og Karriere",
-        "Familierådgivning",
-        "Barns Utvikling"
+        t('services.education.title'),
+        t('services.platform.title'),
+        t('services.consulting.title'),
+        t('footer.contact')
       ]
     },
     {
@@ -42,7 +45,7 @@ const Footer = () => {
               <span className="text-2xl font-bold">Afaf</span>
             </div>
             <p className="text-background/80 leading-relaxed">
-              Et trygt hjem for utdanning, veiledning og støtte for muslimske familier i Norge.
+              {t('footer.description')}
             </p>
             <div className="flex space-x-4">
               <div className="w-10 h-10 bg-background/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors duration-300 cursor-pointer">
@@ -81,7 +84,7 @@ const Footer = () => {
         <div className="border-t border-background/20 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-background/60 text-sm">
-              © 2024 Afaf Instituttet. Alle rettigheter forbeholdt.
+              © 2024 Afaf. {t('footer.rights')}
             </p>
             <div className="flex space-x-6 text-sm">
               <a href="#" className="text-background/60 hover:text-primary transition-colors duration-200">

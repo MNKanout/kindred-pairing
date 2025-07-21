@@ -2,8 +2,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const ContactSection = () => {
+  const { t } = useLanguage();
   return (
     <section className="py-24 bg-gradient-section">
       <div className="container mx-auto px-6">
@@ -12,13 +14,13 @@ const ContactSection = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               <h2 className="text-4xl lg:text-5xl font-bold text-foreground">
-                Kontakt{" "}
+                {t('contact.title')}{" "}
                 <span className="bg-gradient-primary bg-clip-text text-transparent">
-                  Oss
+                  
                 </span>
               </h2>
               <p className="text-lg text-muted-foreground">
-                Vi er her for å hjelpe deg og din familie. Ta kontakt med oss i dag for en gratis konsultasjon.
+                {t('contact.subtitle')}
               </p>
             </div>
 
@@ -90,9 +92,9 @@ const ContactSection = () => {
             <CardContent className="p-8">
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-2xl font-bold text-foreground mb-2">Send oss en melding</h3>
+                  <h3 className="text-2xl font-bold text-foreground mb-2">{t('contact.send')}</h3>
                   <p className="text-muted-foreground">
-                    Fyll ut skjemaet nedenfor så tar vi kontakt med deg så snart som mulig.
+                    {t('contact.subtitle')}
                   </p>
                 </div>
 
@@ -100,13 +102,13 @@ const ContactSection = () => {
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <label className="text-sm font-medium text-foreground mb-2 block">
-                        Fornavn
+                        {t('contact.name')}
                       </label>
                       <Input placeholder="Ditt fornavn" className="bg-background" />
                     </div>
                     <div>
                       <label className="text-sm font-medium text-foreground mb-2 block">
-                        Etternavn
+                        {t('contact.email')}
                       </label>
                       <Input placeholder="Ditt etternavn" className="bg-background" />
                     </div>
@@ -114,9 +116,9 @@ const ContactSection = () => {
 
                   <div>
                     <label className="text-sm font-medium text-foreground mb-2 block">
-                      E-post
+                      {t('contact.message')}
                     </label>
-                    <Input type="email" placeholder="din@epost.no" className="bg-background" />
+                    <Input type="email" placeholder="your@email.com" className="bg-background" />
                   </div>
 
                   <div>
@@ -152,7 +154,7 @@ const ContactSection = () => {
                   </div>
 
                   <Button className="w-full shadow-soft hover:shadow-lg transition-all duration-300">
-                    Send melding
+                    {t('contact.send')}
                   </Button>
                 </form>
               </div>

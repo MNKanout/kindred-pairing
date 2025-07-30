@@ -10,13 +10,16 @@ const AboutSection = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Illustration */}
           <div className="relative order-2 lg:order-1">
-            <img 
-              src={aboutIllustration} 
-              alt="Norwegian integration concept"
-              className="w-full h-auto rounded-3xl shadow-card"
-            />
-            <div className="absolute -top-8 -left-8 w-24 h-24 bg-primary opacity-20 rounded-full blur-xl animate-pulse" />
-            <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-accent opacity-30 rounded-full blur-lg animate-pulse" style={{ animationDelay: '2s' }} />
+            <div className="relative z-10 transform hover:scale-105 transition-transform duration-500">
+              <img 
+                src={aboutIllustration} 
+                alt="Norwegian integration concept"
+                className="w-full h-auto rounded-3xl shadow-card"
+              />
+            </div>
+            {/* Floating elements */}
+            <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-primary rounded-full opacity-60 animate-pulse" />
+            <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-accent rounded-full opacity-40 animate-pulse" style={{ animationDelay: '1s' }} />
           </div>
 
           {/* Content */}

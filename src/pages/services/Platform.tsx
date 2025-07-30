@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, Shield, Heart, Users, Star } from "lucide-react";
 import { Link } from "react-router-dom";
+import Navigation from "@/components/Navigation";
 
 const Platform = () => {
   const features = [
@@ -29,6 +30,7 @@ const Platform = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Navigation />
       {/* Header */}
       <div className="bg-gradient-primary py-20">
         <div className="container mx-auto px-6">

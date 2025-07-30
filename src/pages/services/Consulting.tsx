@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowLeft, Calendar, MessageSquare, User, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
+import Navigation from "@/components/Navigation";
 
 const Consulting = () => {
   const consultingServices = [
@@ -29,6 +30,7 @@ const Consulting = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Navigation />
       {/* Header */}
       <div className="bg-gradient-primary py-20">
         <div className="container mx-auto px-6">

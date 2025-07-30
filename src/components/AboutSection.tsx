@@ -41,12 +41,12 @@ const AboutSection = () => {
                     <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center">
                       <span className="text-2xl">🎓</span>
                     </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-foreground mb-2">Utdanning</h3>
-                      <p className="text-muted-foreground">
-                        Omfattende utdanningsprogrammer som kombinerer akademisk læring med kulturell forståelse.
-                      </p>
-                    </div>
+                     <div>
+                       <h3 className="text-xl font-semibold text-foreground mb-2">{t('about.education.title')}</h3>
+                       <p className="text-muted-foreground">
+                         {t('about.education.description')}
+                       </p>
+                     </div>
                   </div>
                 </CardContent>
               </Card>
@@ -57,12 +57,12 @@ const AboutSection = () => {
                     <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center">
                       <span className="text-2xl">🤝</span>
                     </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-foreground mb-2">Coaching</h3>
-                      <p className="text-muted-foreground">
-                        Personlig coaching og mentoring for å bygge selvtillit og navigere norsk kultur.
-                      </p>
-                    </div>
+                     <div>
+                       <h3 className="text-xl font-semibold text-foreground mb-2">{t('about.coaching.title')}</h3>
+                       <p className="text-muted-foreground">
+                         {t('about.coaching.description')}
+                       </p>
+                     </div>
                   </div>
                 </CardContent>
               </Card>
@@ -73,12 +73,12 @@ const AboutSection = () => {
                     <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center">
                       <span className="text-2xl">💡</span>
                     </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-foreground mb-2">Rådgivning</h3>
-                      <p className="text-muted-foreground">
-                        Ekspert rådgivning om juridiske, sosiale og praktiske aspekter ved livet i Norge.
-                      </p>
-                    </div>
+                     <div>
+                       <h3 className="text-xl font-semibold text-foreground mb-2">{t('about.consulting.title')}</h3>
+                       <p className="text-muted-foreground">
+                         {t('about.consulting.description')}
+                       </p>
+                     </div>
                   </div>
                 </CardContent>
               </Card>

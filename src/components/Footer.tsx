@@ -13,21 +13,21 @@ const Footer = () => {
       ]
     },
     {
-      title: "Ressurser",
+      title: t('footer.resources'),
       links: [
-        "Nyttige lenker",
-        "Nedlastninger",
-        "FAQ",
-        "Kontakt oss"
+        t('footer.links.useful'),
+        t('footer.links.downloads'),
+        t('footer.links.faq'),
+        t('footer.contact')
       ]
     },
     {
-      title: "Om oss",
+      title: t('about.title'),
       links: [
-        "Vår historie",
-        "Vårt team",
-        "Karriere",
-        "Partnere"
+        t('footer.links.history'),
+        t('footer.links.team'),
+        t('footer.links.career'),
+        t('footer.links.partners')
       ]
     }
   ];
@@ -86,17 +86,17 @@ const Footer = () => {
             <p className="text-background/60 text-sm">
               © 2024 Afaf. {t('footer.rights')}
             </p>
-            <div className="flex space-x-6 text-sm">
-              <a href="#" className="text-background/60 hover:text-primary transition-colors duration-200">
-                Personvern
-              </a>
-              <a href="#" className="text-background/60 hover:text-primary transition-colors duration-200">
-                Vilkår
-              </a>
-              <a href="#" className="text-background/60 hover:text-primary transition-colors duration-200">
-                Cookies
-              </a>
-            </div>
+             <div className="flex space-x-6 text-sm">
+               <a href="#" className="text-background/60 hover:text-primary transition-colors duration-200">
+                 {t('footer.links.privacy')}
+               </a>
+               <a href="#" className="text-background/60 hover:text-primary transition-colors duration-200">
+                 {t('footer.links.terms')}
+               </a>
+               <a href="#" className="text-background/60 hover:text-primary transition-colors duration-200">
+                 {t('footer.links.cookies')}
+               </a>
+             </div>
           </div>
         </div>
       </div>

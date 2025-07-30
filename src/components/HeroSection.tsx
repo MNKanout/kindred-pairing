@@ -49,21 +49,6 @@ const HeroSection = () => {
             </Button>
           </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-3 gap-8 pt-8 border-t border-border">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary">500+</div>
-              <div className="text-sm text-muted-foreground">Familier hjulpet</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary">10+</div>
-              <div className="text-sm text-muted-foreground">År erfaring</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary">95%</div>
-              <div className="text-sm text-muted-foreground">Fornøyde kunder</div>
-            </div>
-          </div>
         </div>
 
         {/* Illustration */}

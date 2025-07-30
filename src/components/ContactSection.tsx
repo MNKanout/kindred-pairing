@@ -32,10 +32,10 @@ const ContactSection = () => {
                     <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center">
                       <span className="text-2xl">📧</span>
                     </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-foreground">E-post</h3>
-                      <p className="text-muted-foreground">kontakt@afaf.no</p>
-                    </div>
+                     <div>
+                       <h3 className="text-lg font-semibold text-foreground">{t('contact.email.label')}</h3>
+                       <p className="text-muted-foreground">kontakt@afaf.no</p>
+                     </div>
                   </div>
                 </CardContent>
               </Card>
@@ -46,10 +46,10 @@ const ContactSection = () => {
                     <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center">
                       <span className="text-2xl">📞</span>
                     </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-foreground">Telefon</h3>
-                      <p className="text-muted-foreground">+47 123 45 678</p>
-                    </div>
+                     <div>
+                       <h3 className="text-lg font-semibold text-foreground">{t('contact.phone.label')}</h3>
+                       <p className="text-muted-foreground">+47 123 45 678</p>
+                     </div>
                   </div>
                 </CardContent>
               </Card>
@@ -60,10 +60,10 @@ const ContactSection = () => {
                     <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center">
                       <span className="text-2xl">📍</span>
                     </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-foreground">Adresse</h3>
-                      <p className="text-muted-foreground">Karl Johans gate 1<br />0154 Oslo, Norge</p>
-                    </div>
+                     <div>
+                       <h3 className="text-lg font-semibold text-foreground">{t('contact.address.label')}</h3>
+                       <p className="text-muted-foreground">{t('contact.address.street')}<br />{t('contact.address.city')}</p>
+                     </div>
                   </div>
                 </CardContent>
               </Card>
@@ -74,13 +74,13 @@ const ContactSection = () => {
                     <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center">
                       <span className="text-2xl">🕒</span>
                     </div>
-                    <div>
-                      <h3 className="text-lg font-semibold text-foreground">Åpningstider</h3>
-                      <p className="text-muted-foreground">
-                        Man-Fre: 09:00-17:00<br />
-                        Lør: 10:00-15:00
-                      </p>
-                    </div>
+                     <div>
+                       <h3 className="text-lg font-semibold text-foreground">{t('contact.hours.label')}</h3>
+                       <p className="text-muted-foreground">
+                         {t('contact.hours.weekdays')}<br />
+                         {t('contact.hours.saturday')}
+                       </p>
+                     </div>
                   </div>
                 </CardContent>
               </Card>
@@ -91,67 +91,64 @@ const ContactSection = () => {
           <Card className="border-0 shadow-card">
             <CardContent className="p-8">
               <div className="space-y-6">
-                <div>
-                  <h3 className="text-2xl font-bold text-foreground mb-2">{t('contact.send')}</h3>
-                  <p className="text-muted-foreground">
-                    {t('contact.subtitle')}
-                  </p>
-                </div>
+                 <div>
+                   <h3 className="text-2xl font-bold text-foreground mb-2">{t('contact.form.title')}</h3>
+                   <p className="text-muted-foreground">
+                     {t('contact.subtitle')}
+                   </p>
+                 </div>
 
                 <form className="space-y-4">
                   <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <label className="text-sm font-medium text-foreground mb-2 block">
-                        {t('contact.name')}
-                      </label>
-                      <Input placeholder="Ditt fornavn" className="bg-background" />
-                    </div>
-                    <div>
-                      <label className="text-sm font-medium text-foreground mb-2 block">
-                        {t('contact.email')}
-                      </label>
-                      <Input placeholder="Ditt etternavn" className="bg-background" />
-                    </div>
+                     <div>
+                       <label className="text-sm font-medium text-foreground mb-2 block">
+                         {t('contact.form.firstname')}
+                       </label>
+                       <Input placeholder={t('contact.form.placeholder.name')} className="bg-background" />
+                     </div>
+                     <div>
+                       <label className="text-sm font-medium text-foreground mb-2 block">
+                         {t('contact.form.lastname')}
+                       </label>
+                       <Input placeholder={t('contact.form.lastname')} className="bg-background" />
+                     </div>
                   </div>
 
-                  <div>
-                    <label className="text-sm font-medium text-foreground mb-2 block">
-                      {t('contact.message')}
-                    </label>
-                    <Input type="email" placeholder="your@email.com" className="bg-background" />
-                  </div>
+                   <div>
+                     <label className="text-sm font-medium text-foreground mb-2 block">
+                       {t('contact.email')}
+                     </label>
+                     <Input type="email" placeholder={t('contact.form.placeholder.email')} className="bg-background" />
+                   </div>
 
-                  <div>
-                    <label className="text-sm font-medium text-foreground mb-2 block">
-                      Telefon
-                    </label>
-                    <Input type="tel" placeholder="+47 123 45 678" className="bg-background" />
-                  </div>
+                   <div>
+                     <label className="text-sm font-medium text-foreground mb-2 block">
+                       {t('contact.form.phone')}
+                     </label>
+                     <Input type="tel" placeholder={t('contact.form.placeholder.phone')} className="bg-background" />
+                   </div>
 
-                  <div>
-                    <label className="text-sm font-medium text-foreground mb-2 block">
-                      Tjeneste av interesse
-                    </label>
-                    <select className="w-full p-3 rounded-md border border-input bg-background text-foreground">
-                      <option>Velg tjeneste</option>
-                      <option>Norsk Språkopplæring</option>
-                      <option>Jobbsøking og Karriere</option>
-                      <option>Familierådgivning</option>
-                      <option>Barns Utvikling</option>
-                      <option>Juridisk Veiledning</option>
-                      <option>Samfunnsintegrasjon</option>
-                    </select>
-                  </div>
+                   <div>
+                     <label className="text-sm font-medium text-foreground mb-2 block">
+                       {t('contact.form.service')}
+                     </label>
+                     <select className="w-full p-3 rounded-md border border-input bg-background text-foreground">
+                       <option>{t('contact.form.selectService')}</option>
+                       <option>{t('services.education.title')}</option>
+                       <option>{t('services.platform.title')}</option>
+                       <option>{t('services.consulting.title')}</option>
+                     </select>
+                   </div>
 
-                  <div>
-                    <label className="text-sm font-medium text-foreground mb-2 block">
-                      Melding
-                    </label>
-                    <Textarea 
-                      placeholder="Fortell oss hvordan vi kan hjelpe deg..."
-                      className="min-h-[120px] bg-background"
-                    />
-                  </div>
+                   <div>
+                     <label className="text-sm font-medium text-foreground mb-2 block">
+                       {t('contact.message')}
+                     </label>
+                     <Textarea 
+                       placeholder={t('contact.form.placeholder.message')}
+                       className="min-h-[120px] bg-background"
+                     />
+                   </div>
 
                   <Button className="w-full shadow-soft hover:shadow-lg transition-all duration-300">
                     {t('contact.send')}

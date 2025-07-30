@@ -53,7 +53,50 @@ const translations = {
     'footer.quickLinks': 'Hurtiglenker',
     'footer.services': 'Tjenester',
     'footer.contact': 'Kontakt',
-    'footer.rights': 'Alle rettigheter forbeholdt.'
+    'footer.rights': 'Alle rettigheter forbeholdt.',
+    
+    // Contact details
+    'contact.email.label': 'E-post',
+    'contact.phone.label': 'Telefon',
+    'contact.address.label': 'Adresse',
+    'contact.hours.label': 'Åpningstider',
+    'contact.hours.weekdays': 'Man-Fre: 09:00-17:00',
+    'contact.hours.saturday': 'Lør: 10:00-15:00',
+    'contact.address.street': 'Karl Johans gate 1',
+    'contact.address.city': '0154 Oslo, Norge',
+    
+    // Form fields
+    'contact.form.title': 'Send melding',
+    'contact.form.firstname': 'Fornavn',
+    'contact.form.lastname': 'Etternavn', 
+    'contact.form.phone': 'Telefon',
+    'contact.form.service': 'Tjeneste av interesse',
+    'contact.form.selectService': 'Velg tjeneste',
+    'contact.form.placeholder.name': 'Ditt fornavn',
+    'contact.form.placeholder.email': 'your@email.com',
+    'contact.form.placeholder.phone': '+47 123 45 678',
+    'contact.form.placeholder.message': 'Fortell oss hvordan vi kan hjelpe deg...',
+    
+    // Footer links
+    'footer.resources': 'Ressurser',
+    'footer.links.useful': 'Nyttige lenker',
+    'footer.links.downloads': 'Nedlastninger',
+    'footer.links.faq': 'FAQ',
+    'footer.links.history': 'Vår historie',
+    'footer.links.team': 'Vårt team',
+    'footer.links.career': 'Karriere',
+    'footer.links.partners': 'Partnere',
+    'footer.links.privacy': 'Personvern',
+    'footer.links.terms': 'Vilkår',
+    'footer.links.cookies': 'Cookies',
+    
+    // About section cards
+    'about.education.title': 'Utdanning',
+    'about.education.description': 'Omfattende utdanningsprogrammer som kombinerer akademisk læring med kulturell forståelse.',
+    'about.coaching.title': 'Coaching',
+    'about.coaching.description': 'Personlig coaching og mentoring for å bygge selvtillit og navigere norsk kultur.',
+    'about.consulting.title': 'Rådgivning',
+    'about.consulting.description': 'Ekspert rådgivning om juridiske, sosiale og praktiske aspekter ved livet i Norge.'
   },
   
   EN: {
@@ -100,7 +143,50 @@ const translations = {
     'footer.quickLinks': 'Quick Links',
     'footer.services': 'Services',
     'footer.contact': 'Contact',
-    'footer.rights': 'All rights reserved.'
+    'footer.rights': 'All rights reserved.',
+    
+    // Contact details
+    'contact.email.label': 'Email',
+    'contact.phone.label': 'Phone',
+    'contact.address.label': 'Address',
+    'contact.hours.label': 'Opening Hours',
+    'contact.hours.weekdays': 'Mon-Fri: 09:00-17:00',
+    'contact.hours.saturday': 'Sat: 10:00-15:00',
+    'contact.address.street': 'Karl Johans gate 1',
+    'contact.address.city': '0154 Oslo, Norway',
+    
+    // Form fields
+    'contact.form.title': 'Send Message',
+    'contact.form.firstname': 'First Name',
+    'contact.form.lastname': 'Last Name',
+    'contact.form.phone': 'Phone',
+    'contact.form.service': 'Service of Interest',
+    'contact.form.selectService': 'Select Service',
+    'contact.form.placeholder.name': 'Your first name',
+    'contact.form.placeholder.email': 'your@email.com',
+    'contact.form.placeholder.phone': '+47 123 45 678',
+    'contact.form.placeholder.message': 'Tell us how we can help you...',
+    
+    // Footer links
+    'footer.resources': 'Resources',
+    'footer.links.useful': 'Useful Links',
+    'footer.links.downloads': 'Downloads',
+    'footer.links.faq': 'FAQ',
+    'footer.links.history': 'Our History',
+    'footer.links.team': 'Our Team',
+    'footer.links.career': 'Career',
+    'footer.links.partners': 'Partners',
+    'footer.links.privacy': 'Privacy',
+    'footer.links.terms': 'Terms',
+    'footer.links.cookies': 'Cookies',
+    
+    // About section cards
+    'about.education.title': 'Education',
+    'about.education.description': 'Comprehensive educational programs that combine academic learning with cultural understanding.',
+    'about.coaching.title': 'Coaching',
+    'about.coaching.description': 'Personal coaching and mentoring to build confidence and navigate Norwegian culture.',
+    'about.consulting.title': 'Consulting',
+    'about.consulting.description': 'Expert advice on legal, social and practical aspects of life in Norway.'
   },
   
   AR: {
@@ -147,7 +233,50 @@ const translations = {
     'footer.quickLinks': 'روابط سريعة',
     'footer.services': 'الخدمات',
     'footer.contact': 'اتصل بنا',
-    'footer.rights': 'جميع الحقوق محفوظة.'
+    'footer.rights': 'جميع الحقوق محفوظة.',
+    
+    // Contact details
+    'contact.email.label': 'البريد الإلكتروني',
+    'contact.phone.label': 'الهاتف',
+    'contact.address.label': 'العنوان',
+    'contact.hours.label': 'ساعات العمل',
+    'contact.hours.weekdays': 'الاثنين-الجمعة: 09:00-17:00',
+    'contact.hours.saturday': 'السبت: 10:00-15:00',
+    'contact.address.street': 'كارل يوهانس جيت 1',
+    'contact.address.city': '0154 أوسلو، النرويج',
+    
+    // Form fields
+    'contact.form.title': 'إرسال رسالة',
+    'contact.form.firstname': 'الاسم الأول',
+    'contact.form.lastname': 'اسم العائلة',
+    'contact.form.phone': 'الهاتف',
+    'contact.form.service': 'الخدمة المطلوبة',
+    'contact.form.selectService': 'اختر الخدمة',
+    'contact.form.placeholder.name': 'اسمك الأول',
+    'contact.form.placeholder.email': 'your@email.com',
+    'contact.form.placeholder.phone': '+47 123 45 678',
+    'contact.form.placeholder.message': 'أخبرنا كيف يمكننا مساعدتك...',
+    
+    // Footer links
+    'footer.resources': 'الموارد',
+    'footer.links.useful': 'روابط مفيدة',
+    'footer.links.downloads': 'التحميلات',
+    'footer.links.faq': 'الأسئلة الشائعة',
+    'footer.links.history': 'تاريخنا',
+    'footer.links.team': 'فريقنا',
+    'footer.links.career': 'الوظائف',
+    'footer.links.partners': 'الشركاء',
+    'footer.links.privacy': 'الخصوصية',
+    'footer.links.terms': 'الشروط',
+    'footer.links.cookies': 'ملفات تعريف الارتباط',
+    
+    // About section cards
+    'about.education.title': 'التعليم',
+    'about.education.description': 'برامج تعليمية شاملة تجمع بين التعلم الأكاديمي والفهم الثقافي.',
+    'about.coaching.title': 'التدريب',
+    'about.coaching.description': 'تدريب شخصي وإرشاد لبناء الثقة والتنقل في الثقافة النرويجية.',
+    'about.consulting.title': 'الاستشارة',
+    'about.consulting.description': 'مشورة خبيرة حول الجوانب القانونية والاجتماعية والعملية للحياة في النرويج.'
   }
 };
 

@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
-import aboutIllustration from "@/assets/about-illustration.jpg";
+import aboutIllustration from "@/assets/about-illustration-geometric.jpg";
 
 const AboutSection = () => {
   const { t } = useLanguage();

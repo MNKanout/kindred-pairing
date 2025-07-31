@@ -12,24 +12,22 @@ const HoneymoonSection = () => {
   }, []);
   
   return (
-    <section className="py-24 bg-gradient-subtle">
-      <div className="container mx-auto px-6">
-        <div className="relative">
-          <div className="relative z-10 transform hover:scale-105 transition-transform duration-500">
-            <img 
-              src="/lovable-uploads/968e4006-8463-464e-9699-e043eec0e330.png" 
-              alt="Your new honey moon is coming"
-              className="w-2/3 h-auto rounded-3xl shadow-card mx-auto"
-              style={{
-                transform: `translateY(${scrollY * 0.1}px)`,
-                transition: 'transform 0.1s ease-out'
-              }}
-            />
-          </div>
-          {/* Floating elements */}
-          <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-primary rounded-full opacity-60 animate-pulse" />
-          <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-accent rounded-full opacity-40 animate-pulse" style={{ animationDelay: '1s' }} />
+    <section className="py-24 bg-gradient-subtle overflow-hidden">
+      <div className="relative -mx-6">
+        <div className="relative z-10">
+          <img 
+            src="/lovable-uploads/968e4006-8463-464e-9699-e043eec0e330.png" 
+            alt="Your new honey moon is coming"
+            className="w-full h-auto object-cover"
+            style={{
+              transform: `translateY(${scrollY * 0.2}px) scale(1.2)`,
+              transition: 'transform 0.1s ease-out'
+            }}
+          />
         </div>
+        {/* Floating elements */}
+        <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-primary rounded-full opacity-60 animate-pulse" />
+        <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-accent rounded-full opacity-40 animate-pulse" style={{ animationDelay: '1s' }} />
       </div>
     </section>
   );

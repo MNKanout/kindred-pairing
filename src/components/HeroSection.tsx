@@ -57,7 +57,7 @@ const HeroSection = () => {
             <img 
               src={heroIllustration} 
               alt="Diverse families learning together"
-              className="w-full h-auto rounded-3xl shadow-card"
+              className="w-2/3 h-auto rounded-3xl shadow-card mx-auto"
             />
           </div>
           {/* Floating elements */}

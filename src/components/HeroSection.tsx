@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
-import heroIllustration from "@/assets/hero-illustration.jpg";
+const heroIllustration = "/lovable-uploads/79b1a218-de72-4c32-b45b-3073d63a55e9.png";
 
 const HeroSection = () => {
   const { t } = useLanguage();

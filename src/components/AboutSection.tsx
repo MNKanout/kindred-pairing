@@ -14,7 +14,7 @@ const AboutSection = () => {
               <img 
                 src={aboutIllustration} 
                 alt="Norwegian integration concept"
-                className="w-full h-auto rounded-3xl shadow-card"
+                className="w-3/4 h-auto rounded-3xl shadow-card mx-auto"
               />
             </div>
             {/* Floating elements */}

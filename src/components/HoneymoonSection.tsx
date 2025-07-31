@@ -1,7 +1,15 @@
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useEffect, useState } from "react";
 
 const HoneymoonSection = () => {
   const { t } = useLanguage();
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   
   return (
     <section className="py-24 bg-gradient-subtle">
@@ -11,7 +19,11 @@ const HoneymoonSection = () => {
             <img 
               src="/lovable-uploads/968e4006-8463-464e-9699-e043eec0e330.png" 
               alt="Your new honey moon is coming"
-              className="w-full h-auto rounded-3xl shadow-card"
+              className="w-2/3 h-auto rounded-3xl shadow-card mx-auto"
+              style={{
+                transform: `translateY(${scrollY * 0.1}px)`,
+                transition: 'transform 0.1s ease-out'
+              }}
             />
           </div>
           {/* Floating elements */}

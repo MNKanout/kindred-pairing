@@ -27,9 +27,11 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-primary rounded-full flex items-center justify-center">
-              <span className="text-xl font-bold text-primary-foreground">A</span>
-            </div>
+            <img 
+              src="/lovable-uploads/909fc04e-f4db-47e7-91e7-b7b8039ba3fa.png" 
+              alt="Afaf Logo"
+              className="w-10 h-10 object-contain"
+            />
             <span className="text-2xl font-bold text-foreground">Afaf</span>
           </div>
 

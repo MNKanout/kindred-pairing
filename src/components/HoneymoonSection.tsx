@@ -18,10 +18,10 @@ const HoneymoonSection = () => {
           <img 
             src="/lovable-uploads/968e4006-8463-464e-9699-e043eec0e330.png" 
             alt="Your new honey moon is coming"
-            className="w-full h-96 object-cover"
+            className="w-full h-[480px] object-cover"
             style={{
-              transform: `translateY(${scrollY * 0.2}px) scale(1.2)`,
-              transition: 'transform 0.1s ease-out'
+              objectPosition: `center ${50 + scrollY * 0.1}%`,
+              transition: 'object-position 0.1s ease-out'
             }}
           />
         </div>

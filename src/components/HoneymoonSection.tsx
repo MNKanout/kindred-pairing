@@ -13,12 +13,12 @@ const HoneymoonSection = () => {
   
   return (
     <section className="py-24 bg-gradient-subtle overflow-hidden">
-      <div className="relative -mx-6">
+      <div className="container mx-auto px-6 relative">
         <div className="relative z-10">
           <img 
             src="/lovable-uploads/968e4006-8463-464e-9699-e043eec0e330.png" 
             alt="Your new honey moon is coming"
-            className="w-full h-[800px] object-cover"
+            className="w-full h-[800px] object-cover rounded-3xl shadow-card"
             style={{
               objectPosition: `center ${50 + scrollY * 0.1}%`,
               transition: 'object-position 0.1s ease-out'

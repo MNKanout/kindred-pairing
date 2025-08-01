@@ -18,10 +18,12 @@ const HoneymoonSection = () => {
           <img 
             src="/lovable-uploads/968e4006-8463-464e-9699-e043eec0e330.png" 
             alt="Your new honey moon is coming"
-            className="w-full h-[800px] object-cover rounded-3xl shadow-card"
+            className="w-full h-[800px] object-cover rounded-xl shadow-card"
             style={{
               objectPosition: `center ${50 + scrollY * 0.03}%`,
-              transition: 'object-position 0.1s ease-out'
+              transition: 'object-position 0.1s ease-out',
+              maskImage: 'radial-gradient(ellipse 90% 80% at center, black 60%, transparent 100%)',
+              WebkitMaskImage: 'radial-gradient(ellipse 90% 80% at center, black 60%, transparent 100%)'
             }}
           />
         </div>

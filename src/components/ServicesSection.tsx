@@ -85,22 +85,18 @@ const ServicesSection = () => {
                     </li>
                   ))}
                 </ul>
-                <Link to={`/services/${service.slug}`}>
-                  <Button variant="outline" className="w-full mt-4 hover:bg-primary hover:text-primary-foreground transition-all duration-300">
-                    {t('services.cta')}
-                  </Button>
-                </Link>
+                {service.slug !== 'consulting' && (
+                  <Link to={`/services/${service.slug}`}>
+                    <Button variant="outline" className="w-full mt-4 hover:bg-primary hover:text-primary-foreground transition-all duration-300">
+                      {t('services.cta')}
+                    </Button>
+                  </Link>
+                )}
               </CardContent>
             </Card>
           ))}
         </div>
 
-        {/* CTA */}
-        <div className="text-center mt-16">
-          <Button size="lg" className="shadow-soft hover:shadow-lg transition-all duration-300">
-            {t('services.contact')}
-          </Button>
-        </div>
       </div>
     </section>
   );
